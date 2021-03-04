@@ -5,6 +5,10 @@ import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
 import { Provider } from 'react-redux';
 import store from './Store';
+import moment from 'moment'
+import local from 'moment/locale/ru'
+
+moment.locale('ru', local)
 
 ReactDOM.render(
     <Provider store={store}>

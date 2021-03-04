@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button, Form, Grid, Header, Image, Message, Segment, Table, Icon, Card, Label, Input, Select, Dropdown, Dimmer, Loader, Confirm, Menu, Modal, List, Checkbox } from 'semantic-ui-react'
-import { Link, NavLink } from 'react-router-dom';
+import { Button, Form, Message, Segment, Dimmer, Loader, Confirm, List, Checkbox } from 'semantic-ui-react'
 import CreateFormToDo from '../../Create'
+import moment from 'moment'
 
 const LoginForm = (props) => {
     return (
@@ -91,7 +91,7 @@ const LoginForm = (props) => {
           </List.Content>
           
           <List.Content>
-            <List.Header>{item.title}</List.Header>
+            <List.Header>{item.title} Дата создания: {moment(item.created_at).format("LLL")} ({moment(item.created_at).fromNow()})</List.Header>
             <List.Description >{item.description}</List.Description>
           </List.Content>
         </List.Item>
